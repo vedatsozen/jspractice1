@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE 32</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" rel="text/javascript"></script>
+</head>
+<body>
+
+<div id="buttons">
+    <button id="btn1">1</button>
+    <button id="btn2">2</button>
+    <button id="btn3">3</button>
+</div>
+   
+<div id="container">
+
+<div id="textdiv"></div>
+<div id="imagediv">
+    <img id="img" src="">
+</div>
+
+</div>
+
+
+</body>
+<script>
+
+
+let objects = [
+    {
+        text: "Etiam lobortis sit amet nulla consectetur ultrices. Etiam et sem ultrices, mollis libero id, faucibus magna. Integer eu urna diam. Cras ullamcorper felis a est tempus, at finibus lorem laoreet. Quisque orci mauris, rutrum vel urna ut, cursus commodo massa. Nulla justo ligula, hendrerit vel lobortis eget, posuere a magna. Maecenas eget ipsum quis nunc rhoncus consequat non at urna. In in imperdiet nisi. Sed ac eros lectus. Morbi placerat vestibulum lacus at posuere. Duis dolor dolor, lobortis vitae diam nec, dapibus dapibus ex. Vivamus placerat eget neque ac egestas. Integer finibus ut erat ac tempus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        imageurl: "photo1.jpg"
+    },
+    {
+        text: "Cras sit amet sem id erat mattis facilisis non ac dui. Nam vel felis sapien. Nulla sed nisi eu sem dictum congue. Aliquam non libero ac felis sollicitudin congue ut sed ante. Etiam elementum massa nec tempus ultrices. Nam scelerisque mauris sagittis tellus posuere, vel feugiat enim ullamcorper. Etiam eu sagittis felis. Nam non libero euismod, cursus risus vel, consectetur libero. Integer posuere urna dolor, at aliquet lorem tincidunt placerat. Duis tempor consequat odio id porta.",
+        imageurl: "photo2.jpg"
+    },
+    {
+        text: "Sed ac arcu ac dolor sollicitudin pellentesque. Cras pretium ligula quis malesuada maximus. Aenean eu arcu pharetra, mollis lectus ac, elementum leo. Duis sit amet risus odio. Vestibulum nibh ligula, cursus eu justo sit amet, eleifend fermentum nulla. Quisque bibendum a urna et dapibus. Ut in odio nec mi vehicula porta eu nec quam. Sed eu efficitur neque. Etiam non enim vel nibh mattis congue sit amet ac massa. Curabitur sodales venenatis lacus et venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+        imageurl: "photo3.jpg"
+    }
+];
+
+// HTML'den butonları alıyoruz
+var btn1 = document.getElementById("btn1");
+var btn2 = document.getElementById("btn2");
+var btn3 = document.getElementById("btn3");
+
+var textdiv = document.getElementById("textdiv");
+var imagediv = document.getElementById("imagediv");
+var img = document.getElementById("img");
+
+textdiv.innerHTML = objects[0].text;
+img.src = "images/" + objects[0].imageurl;
+
+btn1.addEventListener("click", function() {
+textdiv.innerHTML = objects[0].text;
+img.src = "images/" + objects[0].imageurl;
+});
+
+btn2.addEventListener("click", function() {
+textdiv.innerHTML = objects[1].text;
+img.src = "images/" + objects[1].imageurl;
+});
+
+btn3.addEventListener("click", function() {
+textdiv.innerHTML = objects[2].text;
+img.src = "images/" + objects[2].imageurl;
+});
+
+</script>
+</html>
