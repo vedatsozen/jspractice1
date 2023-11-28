@@ -40,6 +40,11 @@ div#container > div {
     width: 400px;
 }
 
+div#container > div:hover {
+   transform: translateY(-5px);
+   transition: 500ms ease;
+}
+
 #textdiv {
     margin: auto;
     font-size:11px;
@@ -72,3 +77,17 @@ img {
     width: 100%;
 }
 
+#container.reverse {
+    flex-direction: row-reverse;
+    transition: 500ms ease;
+}
+
+p#vedat {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 12px;
+    color: white;
+    letter-spacing: 10px;
+}

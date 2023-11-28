@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SITE 32</title>
+    <title>JAVASCRIPT PRACTICE / coded by Vedat Sözen</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" rel="text/javascript"></script>
 </head>
@@ -13,6 +13,7 @@
     <button id="btn1">1</button>
     <button id="btn2">2</button>
     <button id="btn3">3</button>
+    <button id="reversebtn">Reverse Divs</button>
 </div>
    
 <div id="container">
@@ -24,7 +25,7 @@
 
 </div>
 
-
+<p id="vedat">Coded by Vedat Sözen</p>
 </body>
 <script>
 
@@ -49,9 +50,11 @@ var btn1 = document.getElementById("btn1");
 var btn2 = document.getElementById("btn2");
 var btn3 = document.getElementById("btn3");
 
+var container = document.getElementById("container");
 var textdiv = document.getElementById("textdiv");
 var imagediv = document.getElementById("imagediv");
 var img = document.getElementById("img");
+var reversebtn = document.getElementById("reversebtn")
 
 textdiv.innerHTML = objects[0].text;
 img.src = "images/" + objects[0].imageurl;
@@ -69,6 +72,10 @@ img.src = "images/" + objects[1].imageurl;
 btn3.addEventListener("click", function() {
 textdiv.innerHTML = objects[2].text;
 img.src = "images/" + objects[2].imageurl;
+});
+
+reversebtn.addEventListener("click", function() {
+container.classList.toggle("reverse");
 });
 
 </script>
